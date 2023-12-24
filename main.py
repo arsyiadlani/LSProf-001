@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import time
 
 API_URL_RAG = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/68732f88-b36c-4e3e-b6f6-6100b6f0311b"
 API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/a2797206-372e-493b-9717-c43c272d3053"
@@ -51,7 +52,15 @@ if prompt := st.chat_input():
     if small_talk_or_not == "Yes":
         response = query_small_talk_chatbot({"question": prompt})
         with st.chat_message("assistant"):
-            st.markdown(f"**Answer:** {response['text']}")
+            assistant_response = response['text']
+            message_placeholder = st.empty()
+            full_response = ""
+            for chunk in assistant_response.split():
+                full_response += chunk + " "
+                time.sleep(0.05)
+                message_placeholder.markdown(full_response + "▌")
+            message_placeholder.markdown(full_response)
+            # st.markdown(f"**Answer:** {response['text']}")
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
     else:
         response = query_rag({"question": prompt})
