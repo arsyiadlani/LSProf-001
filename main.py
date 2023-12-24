@@ -60,12 +60,18 @@ if prompt := st.chat_input():
                 time.sleep(0.05)
                 message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
-            # st.markdown(f"**Answer:** {response['text']}")
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
     else:
         response = query_rag({"question": prompt})
         with st.chat_message("assistant"):
-            st.markdown(f"**Answer:** {response['text']}")
+            assistant_response = response['text']
+            message_placeholder = st.empty()
+            full_response = ""
+            for chunk in assistant_response.split():
+                full_response += chunk + " "
+                time.sleep(0.05)
+                message_placeholder.markdown(full_response + "▌")
+            message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
 
 
