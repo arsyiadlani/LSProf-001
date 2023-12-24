@@ -26,13 +26,13 @@ def query_retrieval_relevance_classifier(payload):
     print(response.json()['text'])
     return response.json()
 
-st.set_page_config(page_title="LSProf - LSP Astra Chatbot App", 
+st.set_page_config(page_title="LSProf - LSP Astra AI Assistant", 
                    page_icon="🤖", 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
-st.title("Chat with LSProf AI Chatbot & Ask Anything about LSP Astra!")
+st.title("Ask Anything about LSP Astra with LSProf AI Assistant!")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
