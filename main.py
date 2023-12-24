@@ -28,7 +28,7 @@ def query_retrieval_relevance_classifier(payload):
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
                    page_icon="🤖", 
-                   layout="centered", 
+                   layout="wide", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
