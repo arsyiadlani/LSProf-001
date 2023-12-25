@@ -2,9 +2,9 @@ import streamlit as st
 import requests
 import time
 
-API_URL_RAG = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/68732f88-b36c-4e3e-b6f6-6100b6f0311b"
-API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/a2797206-372e-493b-9717-c43c272d3053"
-API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/1359f923-1a9e-4b87-9300-36b79a6837bc"
+API_URL_RAG = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/9b9e69d2-3962-415c-af92-e73a90725009"
+API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/9b156c26-8ff7-4756-bb55-09835c6f7660"
+API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/d9c162bd-087f-4cee-97fc-98ec9c9a6af1"
 API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/0c643785-8154-44af-9e1d-6f739fb9dbc2"
 
 def query_rag(payload):
