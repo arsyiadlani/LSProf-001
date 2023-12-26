@@ -39,8 +39,12 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 for message in st.session_state.messages:
-    with st.chat_message(name=message["role"]):
-        st.markdown(message["content"])
+    if message["role"]=="user":
+        with st.chat_message(name="user", avatar="👨"):
+            st.markdown(message["content"])
+    elif message["role"]=="assistant":
+        with st.chat_message(name="assistant", avatar="🤖"):
+            st.markdown(message["content"])
 
 if prompt := st.chat_input("Ask me anything..."):
     with st.chat_message(name="user", avatar="👨"):
