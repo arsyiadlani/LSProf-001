@@ -43,7 +43,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 if prompt := st.chat_input("Ask me anything..."):
-    with st.chat_message(name="user", avatar="🧓"):
+    with st.chat_message(name="user", avatar="👨"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -51,7 +51,7 @@ if prompt := st.chat_input("Ask me anything..."):
     small_talk_or_not = query_small_talk_classifier({"question": prompt})['text']
     if small_talk_or_not == "Yes":
         response = query_small_talk_chatbot({"question": prompt})
-        with st.chat_message("assistant"):
+        with st.chat_message(name="assistant", avatar="🤖"):
             assistant_response = response['text']
             message_placeholder = st.empty()
             full_response = ""
@@ -63,7 +63,7 @@ if prompt := st.chat_input("Ask me anything..."):
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
     else:
         response = query_rag({"question": prompt})
-        with st.chat_message("assistant"):
+        with st.chat_message(name="assistant", avatar="🤖"):
             assistant_response = response['text']
             message_placeholder = st.empty()
             full_response = ""
