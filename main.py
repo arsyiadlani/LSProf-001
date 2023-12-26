@@ -33,7 +33,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
-st.title("Ask anything about LSP Astra with LSProf 👇🏻")
+st.title("Tanyakan apa pun mengenai LSP Astra kepada LSProf 👇🏻")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -46,7 +46,7 @@ for message in st.session_state.messages:
         with st.chat_message(name="assistant"):
             st.markdown(message["content"])
 
-if prompt := st.chat_input("Ask me anything..."):
+if prompt := st.chat_input("Tanya LSProf..."):
     with st.chat_message(name="user", avatar="🧑"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
