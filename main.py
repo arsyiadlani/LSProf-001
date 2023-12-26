@@ -33,7 +33,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
-st.title("Tanya apa saja tentang LSP Astra dengan LSProf 👇🏻")
+st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
