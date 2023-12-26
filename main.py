@@ -40,14 +40,14 @@ if "messages" not in st.session_state:
 
 for message in st.session_state.messages:
     if message["role"]=="user":
-        with st.chat_message(name="user", avatar="👨"):
+        with st.chat_message(name="user", avatar="👱‍♂️"):
             st.markdown(message["content"])
     elif message["role"]=="assistant":
         with st.chat_message(name="assistant", avatar="🤖"):
             st.markdown(message["content"])
 
 if prompt := st.chat_input("Ask me anything..."):
-    with st.chat_message(name="user", avatar="👨"):
+    with st.chat_message(name="user", avatar="👱‍♂️"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
