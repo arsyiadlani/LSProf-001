@@ -9,8 +9,9 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
-page_avatar_2 = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
-lsprof_logo = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
+page_avatar = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
+lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
+lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
 
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
@@ -81,14 +82,14 @@ def type_prompt(prompt):
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
-                   page_icon=page_avatar_2, 
+                   page_icon=page_avatar, 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image(lsprof_logo)
+    st.image(lsprof_logo_large)
     
 st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
                
