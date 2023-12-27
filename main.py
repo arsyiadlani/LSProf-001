@@ -49,10 +49,10 @@ def select_prompt(prompt):
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
-    print("Sending query...")
-    print(f"Query = {prompt}")
+    st.write("Sending query...")
+    st.write(f"Query = {prompt}")
     response = query_rag({"question": prompt})
-    print(f"Response = response['text']")
+    st.write(f"Response = response['text']")
     with st.chat_message(name="assistant", avatar=ai_avatar):
         assistant_response = response['text']
         message_placeholder = st.empty()
