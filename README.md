@@ -1,1 +1,1 @@
-# LSProf-001
+# LSProf AI Virtual Assistant
