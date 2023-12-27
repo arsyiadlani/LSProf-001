@@ -36,16 +36,7 @@ def clear_session():
     requests.delete(API_URL_RAG)
     requests.delete(API_URL_SMALL_TALK_CHATBOT)
 
-def select_prompt(prompt):
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-    for message in st.session_state.messages:
-        if message["role"]=="user":
-            with st.chat_message(name="user", avatar=human_avatar):
-                st.markdown(message["content"])
-        elif message["role"]=="assistant":
-            with st.chat_message(name="assistant", avatar=ai_avatar):
-                st.markdown(message["content"])    
+def select_prompt(prompt):    
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -65,15 +56,6 @@ def select_prompt(prompt):
     st.session_state.messages.append({"role": "assistant", "content": response["text"]})
    
 def type_prompt(prompt):
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-    for message in st.session_state.messages:
-        if message["role"]=="user":
-            with st.chat_message(name="user", avatar=human_avatar):
-                st.markdown(message["content"])
-        elif message["role"]=="assistant":
-            with st.chat_message(name="assistant", avatar=ai_avatar):
-                st.markdown(message["content"])  
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -118,6 +100,16 @@ with col2:
     
 st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
 
+if "messages" not in st.session_state:
+        st.session_state.messages = []
+for message in st.session_state.messages:
+    if message["role"]=="user":
+        with st.chat_message(name="user", avatar=human_avatar):
+            st.markdown(message["content"])
+    elif message["role"]=="assistant":
+        with st.chat_message(name="assistant", avatar=ai_avatar):
+            st.markdown(message["content"])
+                
 template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
 template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
 template_message_3 = "Apa saja syarat untuk mendaftar sertifikasi profesi di LSP Astra?"
