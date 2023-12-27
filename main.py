@@ -78,7 +78,7 @@ col1, col2, col3 = st.columns(3)
 with col2:
     st.image(lsprof_logo)
     
-st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
+st.title("Tanya apa saja seputar LSP Astra dengan :blue[_LSProf_] 👇🏻")
 
 template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
 template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
