@@ -82,10 +82,10 @@ template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
 template_message_3 = "Apa saja syarat untuk mendaftar sertifikasi profesi di LSP Astra?"
 template_message_4 = "Bagaimana cara mengikuti sertifikasi profesi di LSP Astra?"
 
-template_button_1 = st.button(template_message_1, type="primary")
-template_button_2 = st.button(template_message_2, type="primary")
-template_button_3 = st.button(template_message_3, type="primary")
-template_button_4 = st.button(template_message_4, type="primary")
+template_button_1 = st.button(template_message_1)
+template_button_2 = st.button(template_message_2)
+template_button_3 = st.button(template_message_3)
+template_button_4 = st.button(template_message_4)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
