@@ -11,7 +11,7 @@ human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
 page_avatar = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
 lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
-lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=1h9rk_IvZw1aVeOfy8_IoYsO6eQWVULYC"
+lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=10a7FPu6oTN1CYMgDOsFkR6ODMkBsJZif"
 lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
 
 def query_rag(payload):
