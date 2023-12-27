@@ -77,7 +77,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
 
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 
-template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
+template_message_1 = "Apa itu Lembaga Sertifikasi Profesi (LSP) Astra?"
 template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
 template_message_3 = "Apa saja syarat untuk mendaftar sertifikasi profesi di LSP Astra?"
 template_message_4 = "Bagaimana cara mengikuti sertifikasi profesi di LSP Astra?"
