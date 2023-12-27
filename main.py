@@ -9,7 +9,6 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
-page_avatar = "https://drive.google.com/uc?export=view&id=1KxkSlG4R0XM_GypfmxMVdAOE9_SQ4T6S"
 lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
 lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=10a7FPu6oTN1CYMgDOsFkR6ODMkBsJZif"
 lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
@@ -84,7 +83,7 @@ def type_prompt(prompt):
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
-                   page_icon=page_avatar, 
+                   page_icon=lsprof_edited, 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
