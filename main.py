@@ -47,7 +47,7 @@ for message in st.session_state.messages:
         with st.chat_message(name="user", avatar="🧑"):
             st.markdown(message["content"])
     elif message["role"]=="assistant":
-        with st.chat_message(name="assistant"):
+        with st.chat_message(name="assistant", avatar="https://cdn-icons-png.flaticon.com/512/167/167752.png"):
             st.markdown(message["content"])
 
 if prompt := st.chat_input("Tanya LSProf..."):
