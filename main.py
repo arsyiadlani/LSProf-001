@@ -27,6 +27,10 @@ def query_retrieval_relevance_classifier(payload):
     print(response.json()['text'])
     return response.json()
 
+def clear_session():
+    requests.delete(API_URL_RAG)
+    requests.delete(API_URL_SMALL_TALK_CHATBOT)
+
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
                    page_icon="🤖", 
                    layout="centered", 
@@ -34,6 +38,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    menu_items=None)
 
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
+clear_session()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
