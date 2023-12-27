@@ -76,21 +76,19 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
-col1, col2, col3 = st.columns(3)
-with col2:
-    st.image(lsprof_logo)
-    
-st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
-
 template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
 template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
 template_message_3 = "Apa saja syarat untuk mendaftar sertifikasi profesi di LSP Astra?"
 template_message_4 = "Bagaimana cara mengikuti sertifikasi profesi di LSP Astra?"
 
-template_button_1 = st.button(template_message_1)
-template_button_2 = st.button(template_message_2)
-template_button_3 = st.button(template_message_3)
-template_button_4 = st.button(template_message_4)
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.image(lsprof_logo)
+    st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
+    template_button_1 = st.button(template_message_1)
+    template_button_2 = st.button(template_message_2)
+    template_button_3 = st.button(template_message_3)
+    template_button_4 = st.button(template_message_4)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
