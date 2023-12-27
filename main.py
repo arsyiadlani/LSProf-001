@@ -38,7 +38,6 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    menu_items=None)
 
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
-clear_session()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
