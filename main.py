@@ -68,8 +68,6 @@ def ask_prompt(prompt):
             message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
 
-    
-
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
                    page_icon=page_avatar_2, 
                    layout="centered", 
@@ -80,7 +78,7 @@ col1, col2, col3 = st.columns(3)
 with col2:
     st.image(lsprof_logo)
     
-st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
+st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
 
 template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
 template_message_2 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
@@ -105,37 +103,6 @@ for message in st.session_state.messages:
 
 if prompt := st.chat_input("Tanya LSProf..."):
     ask_prompt(prompt=prompt)
-    # with st.chat_message(name="user", avatar=human_avatar):
-    #     st.markdown(prompt)
-    # st.session_state.messages.append({"role": "user", "content": prompt})
-
-    # # Check whether small talk or not
-    # small_talk_or_not = query_small_talk_classifier({"question": prompt})['text']
-    # if small_talk_or_not == "Yes":
-    #     response = query_small_talk_chatbot({"question": prompt})
-    #     with st.chat_message(name="assistant", avatar=ai_avatar):
-    #         assistant_response = response['text']
-    #         message_placeholder = st.empty()
-    #         full_response = ""
-    #         for chunk in assistant_response.split():
-    #             full_response += chunk + " "
-    #             time.sleep(0.09)
-    #             message_placeholder.markdown(full_response + "▌")
-    #         message_placeholder.markdown(full_response)
-    #     st.session_state.messages.append({"role": "assistant", "content": response["text"]})
-    # else:
-    #     response = query_rag({"question": prompt})
-    #     with st.chat_message(name="assistant", avatar=ai_avatar):
-    #         assistant_response = response['text']
-    #         message_placeholder = st.empty()
-    #         full_response = ""
-    #         for chunk in assistant_response.split():
-    #             full_response += chunk + " "
-    #             time.sleep(0.09)
-    #             message_placeholder.markdown(full_response + "▌")
-    #         message_placeholder.markdown(full_response)
-    #     st.session_state.messages.append({"role": "assistant", "content": response["text"]})
-
 elif template_button_1:
     prompt = template_message_1
     ask_prompt(prompt=prompt)
@@ -148,27 +115,3 @@ elif template_button_3:
 elif template_button_4:
     prompt = template_message_4
     ask_prompt(prompt=prompt)
-
-
-    
-
-    # # Check whether small talk or not
-    # small_talk_or_not = query_small_talk_classifier({"question": prompt})['text']
-    # if small_talk_or_not == "Yes":
-    #     response = query_small_talk_chatbot({"question": prompt})
-    #     with st.chat_message("assistant"):
-    #         st.markdown(f"**Answer:** {response['text']}")
-    #     st.session_state.messages.append({"role": "assistant", "content": response["text"]})
-    # else:
-    #     relevance_or_not = query_retrieval_relevance_classifier({"question": prompt})['text']
-    #     if relevance_or_not == "Yes":
-    #         response = query_rag({"question": prompt})
-    #         with st.chat_message("assistant"):
-    #             st.markdown(f"**Answer:** {response['text']}")
-    #         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
-    #     else:
-    #         response = query_small_talk_chatbot({"question": prompt})
-    #         with st.chat_message("assistant"):
-    #             st.markdown(f"**Answer:** {response['text']}")
-    #         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
-    #
