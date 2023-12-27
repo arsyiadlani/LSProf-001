@@ -7,6 +7,10 @@ API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprofai.hf.space/api/v1/pr
 API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/d9c162bd-087f-4cee-97fc-98ec9c9a6af1"
 API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/0c643785-8154-44af-9e1d-6f739fb9dbc2"
 
+human_avatar = "🧑"
+ai_avatar = "https://cdn-icons-png.flaticon.com/512/3829/3829792.png"
+page_avatar = "🤖"
+
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
     print(response.json()['text'])
@@ -32,7 +36,7 @@ def clear_session():
     requests.delete(API_URL_SMALL_TALK_CHATBOT)
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
-                   page_icon="🤖", 
+                   page_icon=page_avatar, 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
@@ -44,14 +48,14 @@ if "messages" not in st.session_state:
 
 for message in st.session_state.messages:
     if message["role"]=="user":
-        with st.chat_message(name="user", avatar="🧑"):
+        with st.chat_message(name="user", avatar=human_avatar):
             st.markdown(message["content"])
     elif message["role"]=="assistant":
-        with st.chat_message(name="assistant", avatar="https://cdn-icons-png.flaticon.com/512/3829/3829792.png"):
+        with st.chat_message(name="assistant", avatar=ai_avatar):
             st.markdown(message["content"])
 
 if prompt := st.chat_input("Tanya LSProf..."):
-    with st.chat_message(name="user", avatar="🧑"):
+    with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -59,7 +63,7 @@ if prompt := st.chat_input("Tanya LSProf..."):
     small_talk_or_not = query_small_talk_classifier({"question": prompt})['text']
     if small_talk_or_not == "Yes":
         response = query_small_talk_chatbot({"question": prompt})
-        with st.chat_message(name="assistant"):
+        with st.chat_message(name="assistant", avatar=ai_avatar):
             assistant_response = response['text']
             message_placeholder = st.empty()
             full_response = ""
@@ -71,7 +75,7 @@ if prompt := st.chat_input("Tanya LSProf..."):
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
     else:
         response = query_rag({"question": prompt})
-        with st.chat_message(name="assistant"):
+        with st.chat_message(name="assistant", avatar=ai_avatar):
             assistant_response = response['text']
             message_placeholder = st.empty()
             full_response = ""
