@@ -9,8 +9,8 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
-page_avatar = "🤖"
 page_avatar_2 = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
+lsprof_logo = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
 
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
@@ -78,7 +78,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image('https://drive.google.com/uc?export=view&id=1M3H9vQW6aITWTZHRts8HquTYhc1UimHT')
+    st.image(lsprof_logo)
     
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 
