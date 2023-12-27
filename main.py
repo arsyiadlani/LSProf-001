@@ -80,7 +80,7 @@ st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 template_message_1 = "Apa itu LSP Astra?"
 template_message_2 = "Bagaimana cara mengikuti sertifikasi profesi di LSP Astra?"
 template_message_3 = "Apa saja syarat untuk mendaftar sertifikasi profesi di LSP Astra?"
-template_message_4 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?
+template_message_4 = "Apa saja skema sertifikasi profesi yang ada di LSP Astra?"
 
 template_button_1 = st.button(template_message_1)
 template_button_2 = st.button(template_message_2)
