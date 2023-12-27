@@ -12,6 +12,7 @@ lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8Jks
 lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=10a7FPu6oTN1CYMgDOsFkR6ODMkBsJZif"
 lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
 lsprof_edited = "https://drive.google.com/uc?export=view&id=1KxkSlG4R0XM_GypfmxMVdAOE9_SQ4T6S"
+lsprof_edited_2 = "https://drive.google.com/uc?export=view&id=1ocB6HDSG8kAN6HCCU8fs7EpwR_ToGMV5"
 
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
@@ -78,14 +79,14 @@ def type_prompt(prompt):
         st.session_state.messages.append({"role": "assistant", "content": response["text"]})
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
-                   page_icon=lsprof_edited, 
+                   page_icon=lsprof_edited_2, 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image(lsprof_edited)
+    st.image(lsprof_edited_2)
     
 st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
                
