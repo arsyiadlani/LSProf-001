@@ -75,7 +75,8 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
                    initial_sidebar_state="auto", 
                    menu_items=None)
 
-st.image('https://drive.google.com/file/d/12oGJUQwv2IhXEtWiX6rIpCHfkp6kMf5g/view?usp=sharing', caption='Sunrise by the mountains')
+
+st.image('https://drive.google.com/uc?export=view&id=12oGJUQwv2IhXEtWiX6rIpCHfkp6kMf5g', caption='Sunrise by the mountains')
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 
 template_message_1 = "Apa yang dimaksud dengan Lembaga Sertifikasi Profesi (LSP) Astra?"
