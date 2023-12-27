@@ -77,7 +77,8 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image('https://drive.google.com/uc?export=view&id=12oGJUQwv2IhXEtWiX6rIpCHfkp6kMf5g', caption='Sunrise by the mountains')
+    st.image('https://drive.google.com/uc?export=view&id=1M3H9vQW6aITWTZHRts8HquTYhc1UimHT', 
+             caption='LSProf by LSP Astra: AI-Powered Virtual Assistant')
     
 st.title("Tanya apa saja seputar LSP Astra dengan LSProf 👇🏻")
 
