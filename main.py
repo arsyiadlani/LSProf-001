@@ -10,6 +10,7 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
 page_avatar = "🤖"
+page_avatar_2 = "https://drive.google.com/uc?export=view&id=1M3H9vQW6aITWTZHRts8HquTYhc1UimHT"
 
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
@@ -70,7 +71,7 @@ def ask_prompt(prompt):
     
 
 st.set_page_config(page_title="LSProf Virtual AI Assistant", 
-                   page_icon=page_avatar, 
+                   page_icon=page_avatar_2, 
                    layout="centered", 
                    initial_sidebar_state="auto", 
                    menu_items=None)
