@@ -10,7 +10,7 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
 page_avatar_2 = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
-lsprof_logo = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
+lsprof_logo = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
 
 def query_rag(payload):
     response = requests.post(API_URL_RAG, json=payload)
