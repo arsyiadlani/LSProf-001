@@ -8,7 +8,7 @@ API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprofai.hf.space/api/v1/predi
 API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/0c643785-8154-44af-9e1d-6f739fb9dbc2"
 
 human_avatar = "🧑"
-ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890536.png"
+ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
 page_avatar = "🤖"
 
 def query_rag(payload):
