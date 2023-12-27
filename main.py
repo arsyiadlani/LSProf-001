@@ -9,7 +9,7 @@ API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space
 
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
-page_avatar = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
+page_avatar = "https://drive.google.com/uc?export=view&id=1KxkSlG4R0XM_GypfmxMVdAOE9_SQ4T6S"
 lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
 lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=10a7FPu6oTN1CYMgDOsFkR6ODMkBsJZif"
 lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
