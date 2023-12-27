@@ -2,10 +2,9 @@ import streamlit as st
 import requests
 import time
 
-API_URL_RAG = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/9b9e69d2-3962-415c-af92-e73a90725009"
-API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/9b156c26-8ff7-4756-bb55-09835c6f7660"
-API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprofai.hf.space/api/v1/prediction/d9c162bd-087f-4cee-97fc-98ec9c9a6af1"
-API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER = "https://arsyiadlani-lsprof-ai.hf.space/api/v1/prediction/0c643785-8154-44af-9e1d-6f739fb9dbc2"
+API_URL_RAG = "https://arsyiadlani-lsprof.hf.space/api/v1/prediction/541e265b-f3e4-495c-906c-17996ece7a2f"
+API_URL_SMALL_TALK_CLASSIFIER = "https://arsyiadlani-lsprof.hf.space/api/v1/prediction/e16bda35-ac26-48e9-8a9a-e092d9324dc1"
+API_URL_SMALL_TALK_CHATBOT = "https://arsyiadlani-lsprof.hf.space/api/v1/prediction/add299b0-8a83-4f92-8988-57b0e5ce0038"
 
 human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
@@ -24,10 +23,6 @@ def query_small_talk_classifier(payload):
 
 def query_small_talk_chatbot(payload):
     response = requests.post(API_URL_SMALL_TALK_CHATBOT, json=payload)
-    return response.json()
-
-def query_retrieval_relevance_classifier(payload):
-    response = requests.post(API_URL_RETRIEVAL_RELEVANCE_CLASSIFIER, json=payload)
     return response.json()
 
 def clear_session():
