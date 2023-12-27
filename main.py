@@ -81,6 +81,7 @@ def type_prompt(prompt):
     # Check whether small talk or not
     small_talk_or_not = query_small_talk_classifier({"question": prompt})['text']
     if small_talk_or_not == "Yes":
+        print(f"Query = {prompt}")
         response = query_small_talk_chatbot({"question": prompt})
         with st.chat_message(name="assistant", avatar=ai_avatar):
             assistant_response = response['text']
