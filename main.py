@@ -11,6 +11,7 @@ human_avatar = "🧑"
 ai_avatar = "https://cdn-icons-png.flaticon.com/512/3890/3890633.png"
 page_avatar = "https://drive.google.com/uc?export=view&id=1M3XDekX13PmunujV-nTSgpdF400kNqmT"
 lsprof_logo_small = "https://drive.google.com/uc?export=view&id=1hqfgurlvhem8JksCpdhBz893iZ2vFKTw"
+lsprof_logo_medium = "https://drive.google.com/uc?export=view&id=19mjqYuyMiDLU-gIlGF_A9Y0ki7_NTfal"
 lsprof_logo_large = "https://drive.google.com/uc?export=view&id=1CSAkUhPagd0sOwZiHi4HInqQU6ZLn7T_"
 
 def query_rag(payload):
@@ -89,7 +90,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image(lsprof_logo_small)
+    st.image(lsprof_logo_medium)
     
 st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
                
