@@ -37,6 +37,15 @@ def clear_session():
     requests.delete(API_URL_SMALL_TALK_CHATBOT)
 
 def select_prompt(prompt):
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+    for message in st.session_state.messages:
+        if message["role"]=="user":
+            with st.chat_message(name="user", avatar=human_avatar):
+                st.markdown(message["content"])
+        elif message["role"]=="assistant":
+            with st.chat_message(name="assistant", avatar=ai_avatar):
+                st.markdown(message["content"])    
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -53,6 +62,15 @@ def select_prompt(prompt):
     st.session_state.messages.append({"role": "assistant", "content": response["text"]})
    
 def type_prompt(prompt):
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+    for message in st.session_state.messages:
+        if message["role"]=="user":
+            with st.chat_message(name="user", avatar=human_avatar):
+                st.markdown(message["content"])
+        elif message["role"]=="assistant":
+            with st.chat_message(name="assistant", avatar=ai_avatar):
+                st.markdown(message["content"])  
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -106,16 +124,16 @@ template_button_2 = st.button(template_message_2)
 template_button_3 = st.button(template_message_3)
 template_button_4 = st.button(template_message_4)
 
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+# if "messages" not in st.session_state:
+#     st.session_state.messages = []
 
-for message in st.session_state.messages:
-    if message["role"]=="user":
-        with st.chat_message(name="user", avatar=human_avatar):
-            st.markdown(message["content"])
-    elif message["role"]=="assistant":
-        with st.chat_message(name="assistant", avatar=ai_avatar):
-            st.markdown(message["content"])
+# for message in st.session_state.messages:
+#     if message["role"]=="user":
+#         with st.chat_message(name="user", avatar=human_avatar):
+#             st.markdown(message["content"])
+#     elif message["role"]=="assistant":
+#         with st.chat_message(name="assistant", avatar=ai_avatar):
+#             st.markdown(message["content"])
 
 if prompt := st.chat_input("Tanya LSProf..."):
     type_prompt(prompt=prompt)
