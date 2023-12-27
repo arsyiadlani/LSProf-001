@@ -36,7 +36,23 @@ def clear_session():
     requests.delete(API_URL_RAG)
     requests.delete(API_URL_SMALL_TALK_CHATBOT)
 
-def ask_prompt(prompt):
+def select_prompt(prompt):
+    with st.chat_message(name="user", avatar=human_avatar):
+        st.markdown(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    response = query_rag({"question": prompt})
+    with st.chat_message(name="assistant", avatar=ai_avatar):
+        assistant_response = response['text']
+        message_placeholder = st.empty()
+        full_response = ""
+        for chunk in assistant_response.split():
+            full_response += chunk + " "
+            time.sleep(0.09)
+            message_placeholder.markdown(full_response + "▌")
+        message_placeholder.markdown(full_response)
+    st.session_state.messages.append({"role": "assistant", "content": response["text"]})
+   
+def type_prompt(prompt):
     with st.chat_message(name="user", avatar=human_avatar):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -102,16 +118,16 @@ for message in st.session_state.messages:
             st.markdown(message["content"])
 
 if prompt := st.chat_input("Tanya LSProf..."):
-    ask_prompt(prompt=prompt)
+    type_prompt(prompt=prompt)
 elif template_button_1:
     prompt = template_message_1
-    ask_prompt(prompt=prompt)
+    select_prompt(prompt=prompt)
 elif template_button_2:
     prompt = template_message_2
-    ask_prompt(prompt=prompt)
+    select_prompt(prompt=prompt)
 elif template_button_3:
     prompt = template_message_3 
-    ask_prompt(prompt=prompt)
+    select_prompt(prompt=prompt)
 elif template_button_4:
     prompt = template_message_4
-    ask_prompt(prompt=prompt)
+    select_prompt(prompt=prompt)
