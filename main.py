@@ -89,7 +89,7 @@ st.set_page_config(page_title="LSProf Virtual AI Assistant",
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image(lsprof_logo_large)
+    st.image(lsprof_logo_small)
     
 st.title("Tanya apa saja seputar LSP Astra dengan :blue[LSProf] 👇🏻")
                
